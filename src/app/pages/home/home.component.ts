@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  public promocion: String[] = []
-  constructor() { 
-    for(let i=0; i<3; i++){
-      this.promocion.push("https://picsum.photos/600/200")
+  public promocion: string[] = [];
+  constructor() {
+    for (let i = 0; i < 3; i++){
+      this.promocion.push('https://picsum.photos/600/200');
     }
   }
 

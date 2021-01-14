@@ -1,5 +1,5 @@
 export enum Niño {
-  lociones = "Lociones",
-  pijamas = "Pijamas",
-  reloj = "Reloj"
+  lociones = 'Lociones',
+  pijamas = 'Pijamas',
+  reloj = 'Reloj'
 }

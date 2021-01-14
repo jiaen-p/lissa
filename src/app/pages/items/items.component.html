@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <nav class="pt-1" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item" ><a routerLink=""><i class="bi bi-house"></i></a></li>
+      <ng-template [ngIf]="categoria" [ngIfElse]="todo">
+        <li class="breadcrumb-item" ><a routerLink="../">{{genero}}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{categoria}}</li>
+      </ng-template>
+      <ng-template #todo>
+        <li class="breadcrumb-item active" aria-current="page">{{genero}}</li>
+      </ng-template>
+    </ol>
+  </nav>
+  <app-componente-producto [imagenes]='imagenes'></app-componente-producto>
+</div>

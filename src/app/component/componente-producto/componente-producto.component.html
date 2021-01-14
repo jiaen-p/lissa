@@ -1,0 +1,20 @@
+<div class="card" style="width: 100%;">
+  <div id="carouselIndicators" class="carousel slide card-img-top" data-bs-interval="false" data-bs-ride="carousel">
+    <ol *ngIf="imagenes.url.length > 1" class="carousel-indicators">
+      <li data-bs-target="#carouselIndicators"  *ngFor="let e of imagenes.url;let i = index; let f = first" [attr.data-bs-slide-to]="i" [ngClass]="{'active':f}"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item" *ngFor="let url of imagenes.url; let i = index; let f = first" [ngClass]="{'active':f}" data-bs-touch="true">
+        <img [src]='url' class="d-block w-100" [alt]='imagenes.alt[i]'>
+      </div>
+    </div>
+    <a *ngIf="imagenes.url.length > 1" class="carousel-control-prev" href="#carouselIndicators" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a *ngIf="imagenes.url.length > 1" class="carousel-control-next" href="#carouselIndicators" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div>
+</div>
