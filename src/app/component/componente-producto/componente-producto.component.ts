@@ -7,6 +7,7 @@ import { Imagen } from '../../clases/imagen';
 })
 export class ComponenteProductoComponent implements OnInit {
   @Input() imagenes: Imagen;
+  @Input() id: string;
   constructor() { }
   ngOnInit(): void {
   }

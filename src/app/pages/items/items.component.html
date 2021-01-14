@@ -11,5 +11,7 @@
       </ng-template>
     </ol>
   </nav>
-  <app-componente-producto [imagenes]='imagenes'></app-componente-producto>
+  <div class="row">
+    <app-componente-producto class="col-12 col-sm-6 col-md-4 col-lg-3" [imagenes]='imagenes' *ngFor="let p of productos; let i = index" [id]= 'i'></app-componente-producto>
+  </div>
 </div>

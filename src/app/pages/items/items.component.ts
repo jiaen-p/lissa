@@ -12,6 +12,8 @@ export class ItemsComponent implements OnInit {
   public categoria = '';
   public url: string[] = [];
   public imagenes: Imagen;
+  // productos dummy, hay q crear la clase productos, pasarlos al componente productos para generar el id
+  public productos = new Array(9);
   constructor(public router: Router) {
     router.events.subscribe(val => {
       [this.genero, this.categoria] = this.router.url.substring(1).split('/');
