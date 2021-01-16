@@ -1,20 +1,20 @@
-<div class="card my-3" style="width: 100%;">
-  <div [id]="'carouselIndicators'+ id" class="carousel slide card-img-top" data-bs-interval="false" data-bs-ride="carousel">
+<section class="card">
+  <div [id]="'productIndicators'+ id" class="carousel carousel-dark slide" attr.data-bs-ride="carousel" attr.data-bs-interval="false" >
     <ol *ngIf="imagenes.url.length > 1" class="carousel-indicators">
-      <li [attr.data-bs-target]="'#carouselIndicators' + id"  *ngFor="let e of imagenes.url;let i = index; let f = first" [attr.data-bs-slide-to]="i" [ngClass]="{'active':f}"></li>
+      <li [attr.data-bs-target]="'#productIndicators' + id"  *ngFor="let e of imagenes.url;let i = index; let f = first" [attr.data-bs-slide-to]="i" [ngClass]="{'active':f}"></li>
     </ol>
     <div class="carousel-inner">
-      <div class="carousel-item" *ngFor="let url of imagenes.url; let i = index; let f = first" [ngClass]="{'active':f}" data-bs-touch="true">
+      <div class="carousel-item" *ngFor="let url of imagenes.url; let i = index; let f = first" [ngClass]="{'active':f}" [routerLink]="['Producto']" [queryParams]="{'id': id}">
         <img [src]='url' class="d-block w-100" [alt]='imagenes.alt[i]'>
       </div>
     </div>
-    <a *ngIf="imagenes.url.length > 1" class="carousel-control-prev" [href]="'#carouselIndicators' + id" role="button" data-bs-slide="prev">
+    <a *ngIf="imagenes.url.length > 1" class="carousel-control-prev" [href]="'#productIndicators' + id" role="button" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </a>
-    <a *ngIf="imagenes.url.length > 1" class="carousel-control-next" [href]="'#carouselIndicators' + id" role="button" data-bs-slide="next">
+    <a *ngIf="imagenes.url.length > 1" class="carousel-control-next" [href]="'#productIndicators' + id" role="button" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </a>
   </div>
-</div>
+</section>

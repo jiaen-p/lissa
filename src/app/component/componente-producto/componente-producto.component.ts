@@ -11,5 +11,4 @@ export class ComponenteProductoComponent implements OnInit {
   constructor() { }
   ngOnInit(): void {
   }
-
 }

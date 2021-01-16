@@ -3,7 +3,7 @@
     <ol class="breadcrumb">
       <li class="breadcrumb-item" ><a routerLink=""><i class="bi bi-house"></i></a></li>
       <ng-template [ngIf]="categoria" [ngIfElse]="todo">
-        <li class="breadcrumb-item" ><a routerLink="../">{{genero}}</a></li>
+        <li class="breadcrumb-item" ><a [routerLink]="['..']">{{genero}}</a></li>
         <li class="breadcrumb-item active" aria-current="page">{{categoria}}</li>
       </ng-template>
       <ng-template #todo>
@@ -12,6 +12,6 @@
     </ol>
   </nav>
   <div class="row">
-    <app-componente-producto class="col-12 col-sm-6 col-md-4 col-lg-3" [imagenes]='imagenes' *ngFor="let p of productos; let i = index" [id]= 'i'></app-componente-producto>
+    <app-componente-producto class="col-12 col-sm-6 col-md-4 col-lg-3 my-3" [imagenes]='imagenes' *ngFor="let p of productos; let i = index" [id]="'producto-' + i"></app-componente-producto>
   </div>
 </div>
