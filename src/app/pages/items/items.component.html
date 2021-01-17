@@ -12,6 +12,6 @@
     </ol>
   </nav>
   <div class="row">
-    <app-componente-producto class="col-12 col-sm-6 col-md-4 col-lg-3 my-3" [imagenes]='imagenes' *ngFor="let p of productos; let i = index" [id]="'producto-' + i"></app-componente-producto>
+    <app-componente-producto class="col-12 col-sm-6 col-md-4 col-lg-3 my-3"  *ngFor="let p of productos; let i = index" [imagenes]='p.imagenes' [id]="p.productId"></app-componente-producto>
   </div>
 </div>

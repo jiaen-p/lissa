@@ -1,21 +1,26 @@
 <button class="btn" (click)="goBack()"><i class="bi bi-arrow-left-circle"></i></button>
-<section class="card">
-  <div [id]="'productIndicators'+ id" class="carousel carousel-dark slide" attr.data-bs-ride="carousel" attr.data-bs-interval="false" >
-    <ol *ngIf="imagenes.url.length > 1" class="carousel-indicators">
-      <li [attr.data-bs-target]="'#productIndicators' + id"  *ngFor="let e of imagenes.url;let i = index; let f = first" [attr.data-bs-slide-to]="i" [ngClass]="{'active':f}"></li>
+<div class="card mb-3 mx-2 mx-md-auto producto">
+  <div [id]="'productIndicators'+ id" class="card-img-top carousel carousel-dark slide" attr.data-bs-ride="carousel" attr.data-bs-interval="false" >
+    <ol *ngIf="imagenes.length > 1" class="carousel-indicators">
+      <li [attr.data-bs-target]="'#productIndicators' + id"  *ngFor="let e of imagenes;let i = index; let f = first" [attr.data-bs-slide-to]="i" [ngClass]="{'active':f}"></li>
     </ol>
     <div class="carousel-inner">
-      <div class="carousel-item" *ngFor="let url of imagenes.url; let i = index; let f = first" [ngClass]="{'active':f}">
-        <img [src]='url' class="d-block w-100" [alt]='imagenes.alt[i]'>
+      <div class="carousel-item" *ngFor="let imagen of imagenes; let i = index; let f = first" [ngClass]="{'active':f}">
+        <img [src]='imagen.url' class="d-block w-100" [alt]='imagen.alt'>
       </div>
     </div>
-    <a *ngIf="imagenes.url.length > 1" class="carousel-control-prev" [href]="'#productIndicators' + id" role="button" data-bs-slide="prev">
+    <a *ngIf="imagenes.length > 1" class="carousel-control-prev" [href]="'#productIndicators' + id" role="button" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </a>
-    <a *ngIf="imagenes.url.length > 1" class="carousel-control-next" [href]="'#productIndicators' + id" role="button" data-bs-slide="next">
+    <a *ngIf="imagenes.length > 1" class="carousel-control-next" [href]="'#productIndicators' + id" role="button" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </a>
   </div>
-</section>
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>

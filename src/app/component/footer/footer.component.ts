@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-
-  constructor() { }
+  public texto: string;
+  constructor() {
+    const s = 'Hola, quería obtener más información.';
+    this.texto = encodeURI(s);
+  }
 
   ngOnInit(): void {
   }
