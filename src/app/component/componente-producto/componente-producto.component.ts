@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { Imagen } from '../../clases/imagen';
 @Component({
@@ -8,7 +9,11 @@ import { Imagen } from '../../clases/imagen';
 export class ComponenteProductoComponent implements OnInit {
   @Input() imagenes: Imagen[];
   @Input() id: string;
-  constructor() { }
+  constructor(private scroll: ViewportScroller) { }
   ngOnInit(): void {
+  }
+  viewProduct(): void{
+    const sc = this.scroll.getScrollPosition();
+    window.sessionStorage.setItem('scroll', sc.toString());
   }
 }

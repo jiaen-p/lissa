@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { Imagen } from 'src/app/clases/imagen';
@@ -18,7 +18,6 @@ export class ItemComponent implements OnInit {
     });
   }
   ngOnInit(): void {
-    console.log(this.id);
   }
   goBack(): void{
     this.location.back();

@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: 'Nino/:cat/Producto', component: ItemComponent},
 ];
 @NgModule({
-  imports: [RouterModule.forRoot(routes), RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

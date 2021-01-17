@@ -4,7 +4,7 @@
       <li [attr.data-bs-target]="'#productIndicators' + id"  *ngFor="let e of imagenes;let i = index; let f = first" [attr.data-bs-slide-to]="i" [ngClass]="{'active':f}"></li>
     </ol>
     <div class="carousel-inner">
-      <div class="carousel-item" *ngFor="let imagen of imagenes; let i = index; let f = first" [ngClass]="{'active':f}" [routerLink]="['Producto']" [queryParams]="{'id': id}">
+      <div class="carousel-item" *ngFor="let imagen of imagenes; let i = index; let f = first" [ngClass]="{'active':f}" [routerLink]="['Producto']" [queryParams]="{'id': id}" (click)="viewProduct()">
         <img [src]='imagen.url' class="d-block w-100" [alt]='imagen.alt'>
       </div>
     </div>
