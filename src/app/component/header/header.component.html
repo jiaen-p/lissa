@@ -7,23 +7,23 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="mujer" role="button" data-bs-toggle="dropdown" aria-expanded="false" routerLinkActive="active">
+          <a class="nav-link dropdown-toggle" id="mujer" role="button" data-bs-toggle="dropdown" aria-expanded="false" routerLinkActive="active">
             Mujer
           </a>
           <ul class="dropdown-menu" aria-labelledby="mujer">
-            <li *ngFor="let categoria of mujer"><a class="dropdown-item" [routerLink]="['Mujer', categoria]" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-expanded="false" aria-controls="navbarNavDropdown">{{categoria}}</a></li>
+            <li *ngFor="let categoria of mujer"><a class="dropdown-item" [routerLink]="['Mujer', categoria]" [queryParams]="{'pag':1}" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-expanded="false" aria-controls="navbarNavDropdown">{{categoria}}</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-expanded="false" aria-controls="navbarNavDropdown" class="dropdown-item" routerLink="Mujer" role="button">Todos los articulos</li>
+            <li data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-expanded="false" aria-controls="navbarNavDropdown" class="dropdown-item" [routerLink]="['/Mujer']" [queryParams]="{'pag': 1}" role="button">Todos los articulos</li>
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="hombre" role="button" data-bs-toggle="dropdown" aria-expanded="false" routerLinkActive="active">
+          <a class="nav-link dropdown-toggle" id="hombre" role="button" data-bs-toggle="dropdown" aria-expanded="false" routerLinkActive="active">
             Hombre
           </a>
           <ul class="dropdown-menu" aria-labelledby="hombre">
-            <li *ngFor="let categoria of hombre"><a class="dropdown-item"  [routerLink]="['Hombre', categoria]" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-expanded="false" aria-controls="navbarNavDropdown">{{categoria}}</a></li>
+            <li *ngFor="let categoria of hombre"><a class="dropdown-item"  [routerLink]="['Hombre', categoria]" [queryParams]="{'pag':1}" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-expanded="false" aria-controls="navbarNavDropdown">{{categoria}}</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-expanded="false" aria-controls="navbarNavDropdown" class="dropdown-item" routerLink="Hombre" role="button">Todos los articulos</li>
+            <li data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-expanded="false" aria-controls="navbarNavDropdown" class="dropdown-item" [routerLink]="['/Hombre']" [queryParams]="{'pag': 1}" role="button">Todos los articulos</li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -31,9 +31,9 @@
             Niño
           </a>
           <ul class="dropdown-menu" aria-labelledby="nino">
-            <li *ngFor="let categoria of nino"><a class="dropdown-item"  [routerLink]="['Nino', categoria]" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-expanded="false" aria-controls="navbarNavDropdown">{{categoria}}</a></li>
+            <li *ngFor="let categoria of nino"><a class="dropdown-item"  [routerLink]="['Nino', categoria]" [queryParams]="{'pag':1}" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-expanded="false" aria-controls="navbarNavDropdown">{{categoria}}</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-expanded="false" aria-controls="navbarNavDropdown" class="dropdown-item" routerLink="Nino" role="button">Todos los articulos</li>
+            <li data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-expanded="false" aria-controls="navbarNavDropdown" class="dropdown-item" [routerLink]="['/Nino']" [queryParams]="{'pag': 1}" role="button">Todos los articulos</li>
           </ul>
         </li>
       </ul>

@@ -1,5 +1,6 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Imagen } from '../../clases/imagen';
 @Component({
   selector: 'app-componente-producto',
