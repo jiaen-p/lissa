@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng bluid --prod --base-href=/demo-lissa"
+    "deploy": "ng build --prod --base-href=/demo-lissa"
   },
   "private": true,
   "dependencies": {
